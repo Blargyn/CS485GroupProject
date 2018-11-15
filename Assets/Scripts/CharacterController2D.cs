@@ -54,9 +54,12 @@ public class CharacterController2D : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 			{
 				m_Grounded = true;
-				if (!wasGrounded)
-					OnLandEvent.Invoke();
-			}
+                //if (!wasGrounded)
+                //	OnLandEvent.Invoke();
+                if (!wasGrounded && m_Rigidbody2D.velocity.y < 0)
+                    OnLandEvent.Invoke();
+
+            }
 		}
 	}
 
@@ -123,17 +126,24 @@ public class CharacterController2D : MonoBehaviour
 				Flip();
 			}
 		}
-		// If the player should jump...
-		if (m_Grounded && jump)
-		{
-			// Add a vertical force to the player.
-			m_Grounded = false;
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-		}
-	}
+        // If the player should jump...
+        //if (m_Grounded && jump)
+        //{
+        //	// Add a vertical force to the player.
+        //	m_Grounded = false;
+        //	m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+        //}
+        if (m_Grounded && jump)//Input.GetButtonDown("Jump"))
+        {
+            m_Grounded = false;
+            m_Rigidbody2D.AddForce(new Vector2(0, m_JumpForce));
+        }
 
 
-	private void Flip()
+    }
+
+
+    private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;

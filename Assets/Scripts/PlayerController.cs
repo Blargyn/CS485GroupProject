@@ -13,6 +13,14 @@ public class PlayerController : MonoBehaviour {
     Rigidbody2D rigBody;
     Animator anim;
     bool isRunning =  false;
+    public float jumpForce = 600f;
+    public LayerMask theGround;
+    public Transform groundCheck;
+    bool onTheGround = false;
+
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
+
     bool canJump = false;
     float minX;
     float maxX;
@@ -40,27 +48,46 @@ public class PlayerController : MonoBehaviour {
         {
             isRunning = false;
         }
-        anim.SetBool("isRunning",isRunning);
+        anim.SetBool("isRunning", isRunning);
 
-        if(Input.GetKeyDown(KeyCode.Space) && canJump)
+        onTheGround = Physics2D.Linecast(transform.position, groundCheck.position, theGround);
+        anim.SetBool("onTheGround", onTheGround);
+
+        if(rigBody.velocity.y < 0)
         {
-            canJump = false;
-            rigBody.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+            rigBody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if(rigBody.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rigBody.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-        if (transform.position.x < minX)
+
+        if (onTheGround && Input.GetButtonDown("Jump"))
         {
-            Vector3 temp = transform.position;
-            temp.x = minX;
-            transform.position = temp;
+            velY = 0f;
+            rigBody.AddForce(new Vector2(0, jumpForce));
         }
 
-        if (transform.position.x > maxX)
-        {
-            Vector3 temp = transform.position;
-            temp.x = maxX;
-            transform.position = temp;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        //{
+        //    canJump = false;
+        //    rigBody.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+        //}
+
+        //if (transform.position.x < minX)
+        //{
+        //    Vector3 temp = transform.position;
+        //    temp.x = minX;
+        //    transform.position = temp;
+        //}
+
+        //if (transform.position.x > maxX)
+        //{
+        //    Vector3 temp = transform.position;
+        //    temp.x = maxX;
+        //    transform.position = temp;
+        //}
     }
 
     void LateUpdate()
