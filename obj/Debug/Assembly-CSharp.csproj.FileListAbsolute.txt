@@ -165,3 +165,7 @@ F:\unityprojects\CS485GroupProject\obj\Debug\Assembly-CSharp.csprojResolveAssemb
 F:\unityprojects\CS485GroupProject\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 F:\unityprojects\CS485GroupProject\obj\Debug\Assembly-CSharp.dll
 F:\unityprojects\CS485GroupProject\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Hann\Desktop\CS485GroupProject\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\Hann\Desktop\CS485GroupProject\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\Hann\Desktop\CS485GroupProject\obj\Debug\Assembly-CSharp.dll
+C:\Users\Hann\Desktop\CS485GroupProject\obj\Debug\Assembly-CSharp.pdb

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - ground
+  - LevelHouse
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: EvenFurtherBackground
+    uniqueID: 2441013375
+    locked: 0
   - name: Background
     uniqueID: 4047290809
     locked: 0
@@ -51,4 +55,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1218068765
+    locked: 0
+  - name: Foreground
+    uniqueID: 1823809595
     locked: 0
