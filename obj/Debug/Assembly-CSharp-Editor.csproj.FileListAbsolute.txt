@@ -1,2 +1,0 @@
-C:\Users\Hann\Desktop\CS485GroupProject\obj\Debug\Assembly-CSharp-Editor.csprojAssemblyReference.cache
-C:\Users\Hann\Desktop\CS485GroupProject\obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache
