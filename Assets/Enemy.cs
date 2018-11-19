@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     private float walkLeft;
     private float walkRight;
     public float walkSpeed = 1.0f;
-    float walkingDirection = 1.0f;
+    float walkingDirection = -1.0f;
     Vector2 walkAmount;
     float originalX;
     private bool Check = false;
@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour {
         walkLeft = transform.position.x - 3.0f;
         walkRight = transform.position.x + 3.0f;
         sprite = GetComponent<SpriteRenderer>();
-        sprite.flipX = true;
     }
 	
 	
