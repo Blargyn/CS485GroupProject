@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 95784015946971894}
   - component: {fileID: 61355021074160610}
   - component: {fileID: 50397609317306864}
+  - component: {fileID: 114987347362560810}
   m_Layer: 0
   m_Name: ogre
   m_TagString: Enemy
@@ -209,7 +210,7 @@ Animator:
   m_GameObject: {fileID: 1954035472829006}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f42eccb81881f5b44bc184afb5e42f11, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99959b5e0bf9a33458b0583d0899fc5f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -241,6 +242,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1954035472829006}
+--- !u!114 &114987347362560810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1954035472829006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd3d994a0266d24ba30294c84d3e55c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 1
 --- !u!212 &212629576325982334
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\camera.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\KillOgre.cs" />
+    <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Ogre.cs" />
     <Compile Include="Assets\Scripts\Play.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />

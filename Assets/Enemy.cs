@@ -4,20 +4,44 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-
+    private SpriteRenderer sprite;
+    private float walkLeft;
+    private float walkRight;
+    public float walkSpeed = 1.0f;
+    float walkingDirection = 1.0f;
+    Vector2 walkAmount;
+    float originalX;
     private bool Check = false;
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Start ()
+    {
+        this.originalX = this.transform.position.x;
+        walkLeft = transform.position.x - 3.0f;
+        walkRight = transform.position.x + 3.0f;
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.flipX = true;
+    }
+	
+	
+	void Update ()
+    {
 		if(Check)
         {
             Destroy(gameObject);
         }
-	}
+        walkAmount.x = walkingDirection * walkSpeed * Time.deltaTime;
+        if (walkingDirection > 0.0f && transform.position.x >= walkRight)
+        {
+            walkingDirection = -1.0f;
+            sprite.flipX = false;
+        }
+        else if (walkingDirection < 0.0f && transform.position.x <= walkLeft)
+        {
+            walkingDirection = 1.0f;
+            sprite.flipX = true;
+        }
+        transform.Translate(walkAmount);
+    }
 
 
     public void Damage(int damage)
@@ -26,5 +50,4 @@ public class Enemy : MonoBehaviour {
         //curHealth -= damage;
         //gameObject.GetComponent<Animation>().Play;
     }
-
 }
