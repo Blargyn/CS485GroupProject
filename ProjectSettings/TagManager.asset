@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - ground
+  - NextLevel
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: FarthestBack
+    uniqueID: 3598816361
+    locked: 0
   - name: Background
     uniqueID: 4047290809
     locked: 0
@@ -51,4 +55,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1218068765
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3735118985
     locked: 0
