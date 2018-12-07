@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerAttack2 : MonoBehaviour {
-
+    public AudioClip audioSwing = null;
     private bool attacking = false;
     private float attackTimer = 0f;
     private float attackCd = 0.3f;
@@ -22,6 +22,7 @@ public class playerAttack2 : MonoBehaviour {
     {
         if(Input.GetKeyDown("f") && !attacking)
         {
+            this.GetComponent<AudioSource>().PlayOneShot(audioSwing);
             attacking = true;
             attackTimer = attackCd;
             attackTrigger.enabled = true;
