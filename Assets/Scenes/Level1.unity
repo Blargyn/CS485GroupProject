@@ -10991,24 +10991,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3264cda1505ebb4d819730c1b7c6150, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &623862354 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1109296088102530, guid: 9c473b562af33b8458901c58d1cceda1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1566328453}
---- !u!114 &623862355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 623862354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9913ba7368084c04ab7a490f79a695d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 1
-  audioHit: {fileID: 0}
 --- !u!4 &623862360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4066171955412646, guid: 9c473b562af33b8458901c58d1cceda1,
@@ -11871,7 +11853,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11894,7 +11876,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1520757614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.574, y: -1.4039998, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12006,11 +11988,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4066171955412646, guid: 9c473b562af33b8458901c58d1cceda1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -15.36239
+      value: -15.39
       objectReference: {fileID: 0}
     - target: {fileID: 4066171955412646, guid: 9c473b562af33b8458901c58d1cceda1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.4211097
+      value: -1.72
       objectReference: {fileID: 0}
     - target: {fileID: 4066171955412646, guid: 9c473b562af33b8458901c58d1cceda1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12036,8 +12018,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114849281718279598, guid: 9c473b562af33b8458901c58d1cceda1, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c473b562af33b8458901c58d1cceda1, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1631218842

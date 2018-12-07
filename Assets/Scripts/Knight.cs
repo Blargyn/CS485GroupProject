@@ -7,7 +7,6 @@ public class Knight : MonoBehaviour
     private float walkLeft;
     private float walkRight;
     public float walkSpeed = 1.0f;
-    public AudioClip audioHit = null;
     float walkingDirection = 1.0f;
     Vector2 walkAmount;
     float originalX;
@@ -25,19 +24,18 @@ public class Knight : MonoBehaviour
     {
         if (Check)
         {
-            this.GetComponent<AudioSource>().PlayOneShot(audioHit);
             Destroy(gameObject);
         }
         walkAmount.x = walkingDirection * walkSpeed * Time.deltaTime;
         if (walkingDirection > 0.0f && transform.position.x >= walkRight)
         {
             walkingDirection = -1.0f;
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-.75f, .75f, 1);
         }
         else if (walkingDirection < 0.0f && transform.position.x <= walkLeft)
         {
             walkingDirection = 1.0f;
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(.75f, .75f, 1);
         }
         transform.Translate(walkAmount);
     }

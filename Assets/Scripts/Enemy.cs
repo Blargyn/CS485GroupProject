@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
     private float walkLeft;
     private float walkRight;
     public float walkSpeed = 1.0f;
-    public AudioClip audioHit = null;
     float walkingDirection = -1.0f;
     Vector2 walkAmount;
     float originalX;
@@ -25,7 +24,6 @@ public class Enemy : MonoBehaviour
     {
 		if(Check)
         {
-            this.GetComponent<AudioSource>().PlayOneShot(audioHit);
             Destroy(gameObject);
         }
         walkAmount.x = walkingDirection * walkSpeed * Time.deltaTime;

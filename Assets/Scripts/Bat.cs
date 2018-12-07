@@ -7,7 +7,6 @@ public class Bat : MonoBehaviour
     private float flyUp;
     private float flyDown;
     public float flySpeed = 1.0f;
-    public AudioClip audioHit = null;
     float flyDirection = -1.0f;
     Vector2 flyAmount;
     float originalY;
@@ -25,7 +24,6 @@ public class Bat : MonoBehaviour
     {
         if (Check)
         {
-            this.GetComponent<AudioSource>().PlayOneShot(audioHit);
             Destroy(gameObject);
         }
         flyAmount.y = flyDirection * flySpeed * Time.deltaTime;
