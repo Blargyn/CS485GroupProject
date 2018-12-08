@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 4629776319186880}
   - component: {fileID: 61189708822665448}
   - component: {fileID: 114830182135163702}
-  - component: {fileID: 114884457222766690}
   m_Layer: 0
   m_Name: Killbox
   m_TagString: Untagged
@@ -98,8 +97,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1759991431964508}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3966494, y: -1.7396328, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.39, y: -5.53, z: -0.13476562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4751074462630540}
@@ -258,18 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baadcc0a9a211ed4f8707b5d9c1589ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114884457222766690
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315619417730274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d241e1cf5df36444a3c0928050eca19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!212 &212232463089539530
 SpriteRenderer:
   m_ObjectHideFlags: 1
