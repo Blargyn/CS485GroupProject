@@ -44,7 +44,7 @@ public class Boomerang1 : MonoBehaviour
     IEnumerator Boom()
     {
         go = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.3f);
         go = false;
     }
 
@@ -78,7 +78,7 @@ public class Boomerang1 : MonoBehaviour
             //transform.position = Vector3.MoveTowards(transform.position, new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z), Time.deltaTime * 40);
         }
        // anim.SetBool("Attacking", attacking);
-        if (!go && Vector2.Distance(new Vector2(player.transform.position.x + 13, player.transform.position.y + 3), transform.position) < 1.5)
+        if (!go && Vector2.Distance(new Vector2(player.transform.position.x + 13, player.transform.position.y + 3), transform.position) < 0.2)
       // if(!go && Vector3.Distance(player.transform.position,transform.position) < 1.5)
         {
            // axe.GetComponent<SpriteRenderer>().enabled = true;
