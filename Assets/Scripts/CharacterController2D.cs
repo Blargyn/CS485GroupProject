@@ -14,11 +14,12 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 
+    public GameObject boomerang;
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    public bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
 	[Header("Events")]
@@ -31,6 +32,9 @@ public class CharacterController2D : MonoBehaviour
 
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
+
+    GameObject axe;
+
 
     private void Awake()
 	{
@@ -45,7 +49,9 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		bool wasGrounded = m_Grounded;
+        axe = GameObject.Find("Axe");
+        axe.GetComponent<SpriteRenderer>().enabled = false;
+        bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
@@ -147,7 +153,18 @@ public class CharacterController2D : MonoBehaviour
 
 
     }
-
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Q))
+    //    {
+    //        GameObject clone;
+    //        //clone = Instantiate(boomerang, new Vector2(transform.position.x + 13, transform.position.y + 3), transform.rotation) as GameObject;
+    //        if (m_FacingRight)
+    //            clone = Instantiate(boomerang, new Vector2(transform.position.x + 13, transform.position.y + 3), transform.rotation) as GameObject;
+    //        else if (!m_FacingRight)
+    //            clone = Instantiate(boomerang, new Vector2(transform.position.x + 10.5f, transform.position.y + 3), transform.rotation) as GameObject;
+    //    }
+    //}
 
     private void Flip()
 	{
