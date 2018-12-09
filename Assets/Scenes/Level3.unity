@@ -84533,7 +84533,7 @@ GameObject:
   - component: {fileID: 581422784}
   - component: {fileID: 581422783}
   - component: {fileID: 581422782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Medieval_props_free_2
   m_TagString: NextLevel
   m_Icon: {fileID: 0}
