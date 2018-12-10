@@ -45,6 +45,7 @@ public class playerAttack2 : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Q) && !throwing)
         {
+            this.GetComponent<AudioSource>().PlayOneShot(audioSwing);
             throwing = true;
             throwTimer = throwCd;
             GameObject clone;
